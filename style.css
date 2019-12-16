@@ -34,8 +34,9 @@ body > header {
 }
 
 body > main {
-    margin-right: 50px;
-    margin-left : 50px;
+    margin-right: 250px;
+    margin-left : 250px;
+    padding: 10px;
 }
 
 body > footer {
@@ -53,4 +54,8 @@ h1 {
     padding-bottom: 20px;
     background-color: lightgray;
     text-align: center;
+}
+
+body div.message {
+    margin-left : 50px;
 }
