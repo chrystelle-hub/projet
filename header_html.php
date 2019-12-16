@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="icomoon/icomoon.css">
+        <script src = "js/jquery-3.4.1.min.js"></script>
     </head>
 
     <body>
@@ -21,9 +22,10 @@
                         <li><a href="compte_chat.php"><span class="icon icon-user-plus"></span> Inscription</a></li>
                         <?php if(isset($_SESSION["login"]) && isset($_SESSION["password"])) {?>
                         <li><a href="deconnexion.php"><span class="icon icon-exit"></span> Déconnexion</a></li>
-            <?php 
-                }
-            ?>
+                        <li><a href="profil.php"><span class="icon icon-user-check"></span> profil</a></li>
+                        <?php 
+                            }
+                        ?>
                     </ul> 
                 </nav>
             
