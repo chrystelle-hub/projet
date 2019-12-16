@@ -16,9 +16,10 @@ if (isset($_POST['btn'])) {
     //exécuter la requête
     $res = $GLOBALS['bdd']->query($req);
 
-    if(!$GLOBALS['bdd']){
+    if(!$GLOBALS['bdd']->errno){
+    }
 
-        if($res->nums_row){
+        if($res->num_rows){
             $ligne_resultat = $res->fetch_assoc();
 
             if(password_verify($pwd, $ligne_resultat['mot_de_passe'])){
@@ -34,8 +35,8 @@ if (isset($_POST['btn'])) {
         } else {
             echo "identifiant ou mot de passe incorrects ou inexistants.";
         }
-    }
 }
+
 
 mysqli_close($GLOBALS['bdd']);
 require_once('header_html.php');
