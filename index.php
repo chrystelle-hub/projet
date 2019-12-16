@@ -1,6 +1,6 @@
 <?php require_once("bdd_connect.php");
-require_once("header_html.php");
 
+session_start();
 /*insérer des messages dans la base de données*/
 
 if (isset($_POST['btn'])){
@@ -52,6 +52,8 @@ if (isset($_POST['btn'])){
 $req_select = "SELECT pseudo, txt, date_post FROM messages ORDER BY date_post";
 $res_select = $GLOBALS['bdd']->query($req_select);
 
+require_once("header_html.php");
+
 while($row = $res_select->fetch_assoc()){
 
 ?>
@@ -66,7 +68,9 @@ while($row = $res_select->fetch_assoc()){
                     <footer>
                         <?php
                         $datetime = DateTime::createFromFormat("Y-m-d H:i:s", $row['date_post']);
-						echo "le ".$datetime->format("d/m/Y à H:i:s");?>
+                        echo "le ".$datetime->format("d/m/Y à H:i:s");?>
+                        <button class="upvote"><span class="icon icon-arrow-up2"></span></button>
+						<button class="downvote"><span class="icon icon-arrow-down2"></span></button>
                     </footer>
                 </article>
                 </main>
@@ -81,6 +85,42 @@ while($row = $res_select->fetch_assoc()){
                 <input type = "submit" name = "btn" value = "Envoyer">
             </form>
         </div>
+
+<script>
+
+$(".upvote, .downvote").click(function(){
+	
+	let id_article = $(this).parent().parent().data("id");
+
+	let action = $(this).attr("class");
+
+	$(".upvote").on('click', function(){
+            $(this).addClass("upvoteSelected")
+        });
+		
+	$(".downvote").on('click', function(){
+            $(this).addClass("downvoteSelected")
+        });
+
+
+	$.ajax({
+		url : "api.php",
+        type : "POST",
+        data : {
+
+			target: id_article,
+			action: action
+		},
+
+        dataType : "text",
+
+        success : function(data){
+            alert(data);
+        }
+	});
+});
+
+</script>
 
 <?php
 require_once("footer_html.php");
