@@ -1,17 +1,17 @@
-# projet
+﻿# projet
 Créer un repository git pour le projet, c'est cette plateforme qui servira pour chacun de vos rendus : 5 minutes
 
 Créer un mockup de l'apparence d'un chat en ligne : 20 minutes
 
 Créer un MCD que vous modifierez à chaque intégration d'amélioration : 20 minutes
 
-Créer un chat en HTML/CSS et PHP, l'utilisateur saisit son pseudo et son premier message, le pseudo est sauvegardé en mémoire pour la durée de la session : 3 heures
+Créer un chat en HTML/CSS et PHP, l'utilisateur saisit son pseudo et son premier message, le pseudo est sauvegardé en mémoire pour la durée de la session : 2 heures
 
 Bien séparer les couches de logique et d'affichage : 20 minutes
 
 Améliorer le chat en intégrant (dans l'ordre que vous souhaitez) :
 
-    une inscription et connexion de l'utilisateur : 1 heure
+    une inscription et connexion de l'utilisateur : 2 heures
 
     l'affichage des messages à l'aide d'AJAX : 1 heure
 
