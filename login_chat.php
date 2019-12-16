@@ -27,7 +27,7 @@ if (isset($_POST['btn'])) {
                 $_SESSION['login'] = $login;
                 $_SESSION['password'] = $pwd;
 
-                header('location: index.php');
+                header('location: profil.php');
 
             } else {
                 echo "identifiant ou mot de passe incorrects ou inexistants.";
