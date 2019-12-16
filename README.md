@@ -17,7 +17,7 @@ Améliorer le chat en intégrant (dans l'ordre que vous souhaitez) :
 
     l'AJAX pour l'envoi de messages : 1 heure
 
-    La possibilité de liker/disliker un message : 30 minutes
+    La possibilité de liker/disliker un message : 1 heure
 
     Les messages du chat peuvent concerner un ou plusieurs sujets taggés par un #tag : 2 heures
 
